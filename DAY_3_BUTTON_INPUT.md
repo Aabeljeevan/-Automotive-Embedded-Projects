@@ -1,7 +1,7 @@
 # 🎮 DAY 3 - Button Input & Interactive Control
 
-**Date:** January 14, 2026  
-**Time Needed:** 1.5-2 hours  
+**Date:** January 14, 2026
+**Time Needed:** 1.5-2 hours
 **Goal:** Make your LEDs respond to button presses!
 
 ---
@@ -161,7 +161,7 @@ ___|_||_||              (Multiple rapid presses!)
 ```c
 if (GPIOA_IDR & (1 << 0)) {
     delay(50000);  // Wait 50ms for bounce to settle
-    
+
     if (GPIOA_IDR & (1 << 0)) {  // Check again
         // Button is REALLY pressed!
         // Do action here
@@ -169,7 +169,7 @@ if (GPIOA_IDR & (1 << 0)) {
 }
 ```
 
-**Pros:** Simple, works well  
+**Pros:** Simple, works well
 **Cons:** Blocks execution during delay
 
 ---
@@ -182,19 +182,19 @@ uint8_t button_prev = 0;
 
 while(1) {
     uint8_t button_current = (GPIOA_IDR & (1 << 0)) ? 1 : 0;
-    
+
     // Detect RISING EDGE (button press event)
     if (button_current == 1 && button_prev == 0) {
         // Button just pressed! Do action ONCE
         change_pattern();
     }
-    
+
     button_prev = button_current;  // Save state for next iteration
     delay(10000);  // Small delay (10ms) for debounce
 }
 ```
 
-**Pros:** Detects button press EVENT, not just state  
+**Pros:** Detects button press EVENT, not just state
 **Cons:** Slightly more complex
 
 ---
@@ -231,7 +231,7 @@ while(1) {
         current_pattern++;
         if (current_pattern > 2) current_pattern = 0;
     }
-    
+
     // Execute current pattern
     switch(current_pattern) {
         case 0:

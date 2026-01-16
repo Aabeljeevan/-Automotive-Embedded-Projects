@@ -1,8 +1,8 @@
 # 🚀 DAY 2 - HANDS-ON: Your First LED Blink!
 
-**Date:** January 14, 2026  
-**Board:** STM32F303 Discovery (MB1035E)  
-**Time Needed:** 90-120 minutes  
+**Date:** January 14, 2026
+**Board:** STM32F303 Discovery (MB1035E)
+**Time Needed:** 90-120 minutes
 **Goal:** BLINK YOUR FIRST LED! 💡
 
 ---
@@ -140,15 +140,15 @@ while (1)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-  
+
   // Turn LED ON
   HAL_GPIO_WritePin(LED_NORTH_GPIO_Port, LED_NORTH_Pin, GPIO_PIN_SET);
   HAL_Delay(500);  // Wait 500 milliseconds
-  
+
   // Turn LED OFF
   HAL_GPIO_WritePin(LED_NORTH_GPIO_Port, LED_NORTH_Pin, GPIO_PIN_RESET);
   HAL_Delay(500);  // Wait 500 milliseconds
-  
+
 }
 /* USER CODE END 3 */
 ```
@@ -293,17 +293,17 @@ while (1)
   // Turn ON North LED
   HAL_GPIO_WritePin(LED_NORTH_GPIO_Port, LED_NORTH_Pin, GPIO_PIN_SET);
   HAL_Delay(200);
-  
+
   // Turn OFF North, Turn ON East
   HAL_GPIO_WritePin(LED_NORTH_GPIO_Port, LED_NORTH_Pin, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(LED_EAST_GPIO_Port, LED_EAST_Pin, GPIO_PIN_SET);
   HAL_Delay(200);
-  
+
   // Turn OFF East, Turn ON West
   HAL_GPIO_WritePin(LED_EAST_GPIO_Port, LED_EAST_Pin, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(LED_WEST_GPIO_Port, LED_WEST_Pin, GPIO_PIN_SET);
   HAL_Delay(200);
-  
+
   // Turn OFF West
   HAL_GPIO_WritePin(LED_WEST_GPIO_Port, LED_WEST_Pin, GPIO_PIN_RESET);
   HAL_Delay(200);
@@ -369,15 +369,15 @@ while (1)
   // Beat 1
   HAL_GPIO_WritePin(___);
   HAL_Delay(___);
-  
+
   // Gap
   HAL_GPIO_WritePin(___);
   HAL_Delay(___);
-  
+
   // Beat 2
   HAL_GPIO_WritePin(___);
   HAL_Delay(___);
-  
+
   // Long pause
   HAL_GPIO_WritePin(___);
   HAL_Delay(___);

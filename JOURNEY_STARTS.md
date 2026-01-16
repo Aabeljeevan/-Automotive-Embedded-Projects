@@ -1,6 +1,6 @@
 # 🚀 My Automotive Embedded Journey Begins!
 
-**Date Started:** January 13, 2026  
+**Date Started:** January 13, 2026
 **Goal:** Master automotive embedded systems in 7 months
 
 ---
